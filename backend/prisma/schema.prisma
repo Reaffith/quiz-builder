@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Quiz {
+  id        String    @id @default(uuid())
+  title     String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  questions Question[]
+}
+
+model Question {
+  id            String       @id @default(uuid())
+  quizId        String
+  quiz          Quiz         @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  type          QuestionType
+  text          String
+  options       Json?        
+  correctAnswer Json?        
+  order         Int          @default(0) 
+
+  @@index([quizId])
+  @@index([order])  
+}
+
+// NOTE: according to requirements it should be read only page so on get question I'll also send 
+// correct answer which is wrong in case if quizzes weren't read only, in that case I would probaly 
+// send corect answers only if quizz or question is completed and submited
+
+enum QuestionType {
+  INPUT
+  SINGLEOPTION    
+  MULTIPLEOPTION  
+}
