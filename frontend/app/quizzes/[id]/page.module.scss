@@ -1,0 +1,146 @@
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.title {
+  font-size: 2.4rem;
+  color: #1f2937;
+}
+
+.backLink {
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.question {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.questionHeader {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.order {
+  background: #e5e7eb;
+  color: #4b5563;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.typeBadge {
+  background: #c7d2fe;
+  color: #4f46e5;
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.questionText {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.preview {
+  margin-top: 16px;
+}
+
+.inputPreview {
+  max-width: 500px;
+}
+
+.disabledInput {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #f3f4f6;
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.correctAnswer {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: #059669;
+
+  strong {
+    color: #047857;
+  }
+}
+
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: white;
+  cursor: default;
+  font-size: 1rem;
+
+  input {
+    accent-color: #4f46e5;
+  }
+}
+
+.correct {
+  background: #ecfdf5;
+  border-color: #10b981;
+  font-weight: 500;
+}
+
+.noOptions {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+.error {
+  color: #dc2626;
+}

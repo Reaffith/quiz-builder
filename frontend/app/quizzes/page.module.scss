@@ -1,0 +1,127 @@
+// app/quizzes/page.module.scss
+
+.page {
+  padding: 20px 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+
+  h1 {
+    font-size: 2.2rem;
+    color: #1f2937;
+  }
+}
+
+.createBtn {
+  background-color: #4f46e5;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #4338ca;
+  }
+}
+
+.loading,
+.error,
+.empty {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 40px 0;
+  color: #6b7280;
+}
+
+.error {
+  color: #dc2626;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.cardLink {
+  display: block;
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cardTitle {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.cardCount {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.deleteBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #dc2626;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.pageBtn {
+  padding: 10px 20px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+
+  &:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+  }
+}
+
+.pageInfo {
+  color: #6b7280;
+}
